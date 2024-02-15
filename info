@@ -1,0 +1,9 @@
+#Ready-made function for checking duplicates and empty lines
+
+def dataset_info(dataset):   #функция информации датасета (info - Dataset)
+    print(dataset.info())
+    display(dataset.head())
+
+def dataset_isnull(dataset): # функция пропусков и дубликатов
+    print('Количество явных дубликатов в датасете:', dataset.duplicated().sum())
+    print('Количество пропусков в датасете:', dataset.isnull().sum())
